@@ -7,9 +7,9 @@ class UploadFileForm(FlaskForm):
         if not field.data:
             raise ValidationError('No file chosen.')
 
-        # file_name = field.data.filename
-        # if not file_name.endswith('.csv'):
-        #     raise ValidationError('File must be in CSV format.')
+        file_name = field.data.filename
+        if not file_name.endswith('.csv'):
+            raise ValidationError('File must be in CSV format.')
 
     uploadFileField = FileField('Upload', validators=[DataRequired()])
     submit = SubmitField('Upload File')
