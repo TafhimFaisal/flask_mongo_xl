@@ -4,7 +4,6 @@ from uploadFileAndMap.form import UploadFileForm,MapUploadFileForm
 from uploadFileAndMap import app,db
 from bson import ObjectId
 
-
 @app.route("/update/mapping",methods=['POST'])
 def update_mapping():
     collection = db['product_collection']
