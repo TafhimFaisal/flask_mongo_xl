@@ -3,6 +3,7 @@ import pandas as pd
 from uploadFileAndMap.form import UploadFileForm,MapUploadFileForm
 from uploadFileAndMap import app,db
 from bson import ObjectId
+from pathlib import Path
 
 @app.route("/update/mapping",methods=['POST'])
 def update_mapping():
@@ -23,6 +24,10 @@ def upload_file_and_map():
         uploaded_file = request.files['uploadFileField']
 
         if uploaded_file:
+            path = Path('uploads')
+            if not path.exists():
+                path.mkdir(parents=True, exist_ok=True)
+                
             file_path = 'uploads/' + uploaded_file.filename
             uploaded_file.save(file_path)
             df = pd.read_excel(file_path)
