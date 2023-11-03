@@ -5,7 +5,7 @@ from functools import wraps
 from logging.config import dictConfig
 
 from flask import Flask, url_for, render_template, session, redirect, json,flash
-from flask_oauthlib.contrib.client import OAuth, OAuth2Application
+from flask_oauthlib.contrib.client import OAuth
 from flask_session import Session
 from xero_python.accounting import AccountingApi
 from xero_python.api_client import ApiClient
@@ -15,7 +15,6 @@ from xero_python.exceptions import AccountingBadRequestException
 from xero_python.identity import IdentityApi
 
 import logging_settings
-from utils import jsonify, serialize_model
 from dotenv import dotenv_values
 
 config = dotenv_values()
