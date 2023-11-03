@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light p-1">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{{ url_for('index') }}">Xero</a>
+            <a class="nav-item nav-link active" href="{{ url_for('accounts') }}">Accounts</a>
+            <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+            <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+          </div>
+        </div>
+      </nav>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }} mt-5 mb-0">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      
+      {% if data != None %}
+        <table class="table">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">description</th>
+              <th scope="col">Code</th>
+              <th scope="col">Status</th>
+              <th scope="col">Account</th>
+            </tr>
+
+            {% for item in data['accounts'] %}
+              <tr>
+                  <td>{{ item['name'] }}</td>
+                  <td style="width: 500px;">{{ item['description'] }}</td>
+                  <td>{{ item['reporting_code_name'] }}</td>
+                  <td>{{ item['status'] }}</td>
+                  <td>{{ item['bank_account_type'] }}</td>
+              </tr>
+            {% endfor %}
+        </table>
+      {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
