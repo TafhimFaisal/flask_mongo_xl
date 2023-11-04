@@ -21,4 +21,4 @@ class MapUploadFileForm(FlaskForm):
         ('Reverse charge', 'Reverse charge'),
         ('GAT tax', 'GAT tax'),
     ],validators=[DataRequired()])
-    submit = SubmitField('Upload')
+    submit = SubmitField('Save')
