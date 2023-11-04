@@ -25,7 +25,7 @@ Once this mapping has been saved , the system should then save the resultant map
 correctly mapped Types.
 
 ## project
-A system have benn made to take .xlsx file in a given formet and it will take the data from the .xlsx file and store it to MongoDB.
+A system have ben made to take .xlsx file in a given formet and it will take the data from the .xlsx file and store it to MongoDB.
 It will show all the data in a table where user can change the mapping of each data in given options.
 ![image](https://github.com/TafhimFaisal/tax_star/assets/39499963/7e0a225f-9fcf-4a3c-865c-262a0de93bb4)
 
