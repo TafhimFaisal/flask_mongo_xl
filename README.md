@@ -25,7 +25,6 @@ Once this mapping has been saved , the system should then save the resultant map
 correctly mapped Types.
 
 ## project
-- use the .xlsx file given in code base.
 - A system have been made to take .xlsx file in a given formet and it will take the data from the .xlsx file and show it of the landing page.
 - It will show all the data in a table where user can change the mapping of each data in given options. and then after setting the mapping click on 'store map data' button, this will upload all the data to mongoDB as mapped. 
 - It will not store data until unless the 'store map data' button is pressed. and it will only store the mapped data. the data that is not mapped will not be stored.
@@ -64,7 +63,7 @@ A system have benn made with intigration to xero. system has 3 navigation button
 2. accout list page.
 3. and enother button is for logout.
 on starting the system will go to landing page. user need to go to account page to see dummy data fatch from xero applications.
-before that you need to login with xero app to see the dumm data.
+before that you need to login with xero app to see the dummy data.
 
 ![image](https://github.com/TafhimFaisal/tax_star/assets/39499963/01354924-13d9-4fa0-ac2a-c26b24ef59f2)
 
