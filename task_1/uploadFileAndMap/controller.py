@@ -49,13 +49,20 @@ def upload_file_and_show():
     data = None
 
     if request.method == 'POST' and form.validate_on_submit():
-        flash('successfull','success')
         uploaded_file = request.files['uploadFileField']
 
         if uploaded_file:
             df = pd.read_excel(uploaded_file)
             records = df.to_dict('records')
-            data = records
+            expected_header = ['Product Name', 'Description', 'Type of Product'] 
+            missing_columns = [col for col in expected_header if col not in df.columns]
+
+            if missing_columns:
+                flash(f"Expected columns are missing: {missing_columns}",'danger')
+                data = None
+            else:
+                flash('successfull','success')
+                data = records
 
     return render_template('index.html', 
                 data=data,
