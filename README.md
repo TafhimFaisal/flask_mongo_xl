@@ -25,9 +25,17 @@ Once this mapping has been saved , the system should then save the resultant map
 correctly mapped Types.
 
 ## project
-A system have been made to take .xlsx file in a given formet and it will take the data from the .xlsx file and store it to MongoDB.
-It will show all the data in a table where user can change the mapping of each data in given options.
-![image](https://github.com/TafhimFaisal/tax_star/assets/39499963/7e0a225f-9fcf-4a3c-865c-262a0de93bb4)
+- use the .xlsx file given in code base.
+- A system have been made to take .xlsx file in a given formet and it will take the data from the .xlsx file and show it of the landing page.
+- It will show all the data in a table where user can change the mapping of each data in given options. and then after setting the mapping click on 'store map data' button, this will upload all the data to mongoDB as mapped. 
+- It will not store data until unless the 'store map data' button is pressed. and it will only store the mapped data. the data that is not mapped will not be stored.
+
+![image](https://github.com/TafhimFaisal/tax_star/assets/39499963/0180b1e0-6a1b-4783-bfd4-73a979336176)
+
+and then the mapped data can be seen in other pages in
+- standard rate page
+- reverse charge page
+- gat tax page
 
 ## Installations
 navigte to task_1 folder and then open it in terminal 
