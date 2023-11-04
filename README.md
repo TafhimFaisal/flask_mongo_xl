@@ -29,6 +29,36 @@ A system have benn made to take .xlsx file in a given formet and it will take th
 It will show all the data in a table where user can change the mapping of each data in given options.
 ![image](https://github.com/TafhimFaisal/tax_star/assets/39499963/7e0a225f-9fcf-4a3c-865c-262a0de93bb4)
 
+## Installations
+navigte to task_1 folder and then open it in terminal 
+and then run bellow command:
+
+1. run ` python -m venv env `
+2. run ` env/Scripts/activate `
+3. run ` pip install -r requirements.txt `
+4. made a .env file following the .env.example file.
+5. run ` flask --app run --debug run `
+6. opent browser in localhost:5000.
+7. upload the given .xlsx file gien in project file to test.
+
+
+# Task - 2 : XERO Integration Application
+## Instructions
+- The Task is to Create an Application with XERO API`s Fully Integrated with it . The Application can be created
+using the coding language the company is looking for. The sub tasks of this application would be:
+- Connect to a test Organization in XERO.
+- After the connection has been established to a XERO org , pull in the data for the Accounts Module and show it
+on a FrontEnd view.
+
+## project
+A system have benn made with intigration to xero. system has 3 navigation button 
+1. landing page.
+2. accout list page.
+3. and enother button is for logout.
+on starting the system will go to landing page. user need to go to account page to see dummy data fatch from xero applications.
+before that you need to login with xero app to see the dumm data.
+
+![image](https://github.com/TafhimFaisal/tax_star/assets/39499963/01354924-13d9-4fa0-ac2a-c26b24ef59f2)
 
 ## Installations
 navigte to task_2 folder and then open it in terminal 
@@ -38,8 +68,8 @@ and then run bellow command:
 2. run ` env/Scripts/activate `
 3. run ` pip install -r requirements.txt `
 4. made a .env file following the .env.example file.
-5. run ` flask --app run --debug run `
-6. opent browser in http://127.0.0.1:5000.
+5. run ` flask --app app --debug run `
+6. opent browser in localhost:5000.
 7. upload the given .xlsx file gien in project file to test.
 
 
