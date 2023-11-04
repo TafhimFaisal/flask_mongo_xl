@@ -2,8 +2,6 @@ from flask import render_template, request, flash,redirect,url_for
 import pandas as pd
 from uploadFileAndMap.form import UploadFileForm,MapUploadFileForm
 from uploadFileAndMap import app,db
-from bson import ObjectId
-from pathlib import Path
 
 def get_all_error_messages(form):
     error_messages = []
