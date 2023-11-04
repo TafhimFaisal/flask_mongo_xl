@@ -70,7 +70,6 @@ and then run bellow command:
 4. made a .env file following the .env.example file.
 5. run ` flask --app app --debug run `
 6. opent browser in localhost:5000.
-7. upload the given .xlsx file gien in project file to test.
 
 
 
