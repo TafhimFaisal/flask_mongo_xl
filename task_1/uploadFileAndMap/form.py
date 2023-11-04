@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import SubmitField, FileField,StringField,SelectField
+from wtforms import SubmitField, FileField,StringField,SelectField,FieldList,FormField
 from wtforms.validators import DataRequired, ValidationError
 
 class UploadFileForm(FlaskForm):
@@ -14,11 +14,17 @@ class UploadFileForm(FlaskForm):
     uploadFileField = FileField('Upload', validators=[DataRequired()])
     submit = SubmitField('Upload File')
 
+class MapForm(FlaskForm):
+    product_name = StringField('Product Name', validators=[DataRequired()])
+    description = StringField('Description', validators=[DataRequired()])
+    product_type = StringField('Product Type', validators=[DataRequired()])
+    map = SelectField('',choices=[
+        (None,'<------ select ------>'),
+        ('standard_rate', 'Standard Rate'),
+        ('reverse_charge', 'Reverse charge'),
+        ('gat_tax', 'GAT tax'),
+    ],default=None,validators=[])
+
 class MapUploadFileForm(FlaskForm):
-    object_id = StringField('object_id', validators=[DataRequired()])
-    map = SelectField('Map To',choices=[
-        ('Standard Rate Type', 'Standard Rate Type'),
-        ('Reverse charge', 'Reverse charge'),
-        ('GAT tax', 'GAT tax'),
-    ],validators=[DataRequired()])
-    submit = SubmitField('Save')
+    map = FieldList(FormField(MapForm),min_entries= 1)
+    submit = SubmitField('Store Mapped Data')
