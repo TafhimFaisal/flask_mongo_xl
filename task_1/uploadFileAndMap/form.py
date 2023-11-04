@@ -9,7 +9,7 @@ class UploadFileForm(FlaskForm):
 
         file_name = field.data.filename
         if not file_name.endswith('.xlsx'):
-            raise ValidationError('File must be in xls format.')
+            raise ValidationError('File must be in xlsx format.')
 
     uploadFileField = FileField('Upload', validators=[DataRequired()])
     submit = SubmitField('Upload File')
