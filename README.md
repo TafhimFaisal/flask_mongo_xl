@@ -38,8 +38,8 @@ and then run bellow command:
 3. run ` pip install -r requirements.txt `
 4. made a .env file following the .env.example file.
 5. run ` flask --app run --debug run `
-6. opent browser in localhost:5000.
-7. upload the given .xlsx file gien in project file to test.
+6. opent browser in `localhost:5000`.
+7. upload the given `.xlsx` file gien in project file to test.
 
 
 # Task - 2 : XERO Integration Application
@@ -69,7 +69,7 @@ and then run bellow command:
 3. run ` pip install -r requirements.txt `
 4. made a .env file following the .env.example file.
 5. run ` flask --app app --debug run `
-6. opent browser in localhost:5000.
+6. opent browser in `localhost:5000`. ( this url should be the root of call beck url of xero application that is fatching the data from. )
 
 
 
