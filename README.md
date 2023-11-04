@@ -1,7 +1,7 @@
 
 # Task - 1 : Excel File Uploader
 
-## Instruction:
+## Instructions
 - An excel file uploader which uploads files in a predefined format of your choice. You can upload it in any format.
 - Once the format has been determined , the system  should upload the data to a MongoDB database. The data uploaded should be in a specifc mapped Format which would be done based on a screen where the user would select what type of data should go where. 
 
@@ -24,7 +24,7 @@ Toys).
 Once this mapping has been saved , the system should then save the resultant mapped to a mongo DB with the
 correctly mapped Types.
 
-## project:
+## project
 A system have benn made to take .xlsx file in a given formet and it will take the data from the .xlsx file and store it to MongoDB.
 It will show all the data in a table where user can change the mapping of each data in given options.
 ![image](https://github.com/TafhimFaisal/tax_star/assets/39499963/7e0a225f-9fcf-4a3c-865c-262a0de93bb4)
